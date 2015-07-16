@@ -10,7 +10,8 @@ angular.module('starter', [
   'starter.controllers',
   'starter.services',
   'firebase',
-  'angularMoment'
+  'angularMoment',
+  'angles'
 ])
 
 .run(function($ionicPlatform) {

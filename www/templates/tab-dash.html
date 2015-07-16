@@ -1,19 +1,28 @@
 <ion-view view-title="Ortuino">
   <ion-content class="padding">
+
     <div class="list card">
       <div class="item item-divider">Moisture level</div>
       <div class="item item-body">
         <div>
-
-          <strong>{{getValue()}}%</strong> (<span am-time-ago="data.time"></span>)
-
+          <strong>{{getValue()}}%</strong> (<span am-time-ago="getTime()"></span>)
           <!-- Progress bar for moisture level -->
           <div class="meter">
             <span style="width: {{getValue()}}%"></span>
           </div>
-
         </div>
       </div>
     </div>
+
+    <canvas linechart data="chartData" options="options" height="600"></canvas>
+
+    <!-- <ul>
+      <li ng-repeat="val in moistureValues">
+      <span am-time-ago="val.time"></span>
+      {{val.value}}
+      </li>
+    </ul> -->
+
+
   </ion-content>
 </ion-view>
